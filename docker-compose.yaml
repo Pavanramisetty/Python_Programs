@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube_latest
+    volumes:
+      - ./sonar.properties:/opt/sonarqube/conf/sonar.properties
+      - ./ldap.cer:/usr/local/openjdk-11/lib/security/cacerts.cer
+        #    networks:
+        #- sonarnet
+
+
